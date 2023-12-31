@@ -7,3 +7,4 @@ wget "https://raw.githubusercontent.com/C4FE1/config-sys/main/config-sys"
 
 mv config-sys "$PKGBUILD"
 
+chmod +x "$PKGBUILD"
