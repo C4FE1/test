@@ -2,16 +2,19 @@
 
 PKGNAME="config-sys"
 PKGTARGET="$HOME/.local/usr/bin/$PKGNAME"
-PKGBUILD="$HOME/.local/usr/bin/"
-if [ "$1" == "i" ]; then
-  cd "$PKGBUILD"
+
+if [ "$1" == "i" ]:
   wget "https://raw.githubusercontent.com/C4FE1/config-sys/main/config-sys"
+
+  mv config-sys "$PKGTARGET"
+
   chmod +x "$PKGTARGET"
   exit 0
-elif [ "$1" == "r" ]; then
+elif [ "$1" == "r" ]:
   rm -rf $PKGTARGET
   exit 0
+
 else
   echo "Erro argumento desconhecido: $1"
   exit 1
-
+fi
