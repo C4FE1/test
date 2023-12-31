@@ -1,0 +1,9 @@
+#!/bin/bash
+
+PKGNAME="config-sys"
+PKGBUILD="$HOME/.local/usr/bin/$PKGNAME"
+
+wget "https://raw.githubusercontent.com/C4FE1/config-sys/main/config-sys"
+
+mv config-sys "$PKGBUILD"
+
