@@ -3,14 +3,14 @@
 PKGNAME="config-sys"
 PKGTARGET="$HOME/.local/usr/bin/$PKGNAME"
 
-if [ "$1" == "i" ]:
+if [ "$1" == "i" ]; then
   wget "https://raw.githubusercontent.com/C4FE1/config-sys/main/config-sys"
 
   mv config-sys "$PKGTARGET"
 
   chmod +x "$PKGTARGET"
   exit 0
-elif [ "$1" == "r" ]:
+elif [ "$1" == "r" ]; then
   rm -rf $PKGTARGET
   exit 0
 
