@@ -6,6 +6,7 @@ PKGBUILD="$HOME/src/ipm/tmp/$PKGNAME"
 PKGTARGET="$HOME/.local/usr"
 
 if [ "$1" == "i" ]; then
+  mkdir "$PKGBUILD"
   cd "$PKGBUILD"
   wget "https://github.com/dylanaraps/neofetch/archive/refs/tags/$PKGVER.tar.gz"
   tar -xvf "$PKGVER.tar.gz"
