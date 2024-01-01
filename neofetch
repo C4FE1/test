@@ -15,6 +15,7 @@ if [ "$1" == "i" ]; then
   rm -rf *.md
   exit 0
 elif [ "$1" == "r" ]; then
+  ls -lta
   make PREFIX="$PKGTARGET" uninstall
   rm -rf $PKGBUILD
   exit 0
