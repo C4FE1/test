@@ -12,7 +12,7 @@ if [ "$1" == "i" ]; then
   tar -xvf "$PKGVER.tar.gz"
   cd "$PKGNAME-$PKGVER"
   make PREFIX="$PKGTARGET" install
-  cp Makefile "$HOME/src/ipm/tmp/pkg/"
+  cp Makefile "$HOME/src/ipm/pkg/"
   rm -rf *.md
   exit 0
 elif [ "$1" == "r" ]; then
