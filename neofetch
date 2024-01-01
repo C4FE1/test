@@ -12,10 +12,11 @@ if [ "$1" == "i" ]; then
   tar -xvf "$PKGVER.tar.gz"
   cd "$PKGNAME-$PKGVER"
   make PREFIX="$PKGTARGET" install
+  cp Makefile "$HOME/src/ipm/tmp/pkg/"
   rm -rf *.md
   exit 0
 elif [ "$1" == "r" ]; then
-  ls -lta
+  cd "$HOME/src/ipm/tmp/pkg/"
   make PREFIX="$PKGTARGET" uninstall
   rm -rf $PKGBUILD
   exit 0
