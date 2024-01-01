@@ -8,6 +8,7 @@ PKGTARGET="$HOME/.local/usr"
 if [ "$1" == "i" ]; then
   cd "$PKGBUILD"
   wget "https://github.com/dylanaraps/neofetch/archive/refs/tags/$PKGVER.tar.gz"
+  tar -xvf "$PKGVER.tar.gz"
   cd "$PKGNAME-$PKGVER"
   make PREFIX="$PKGTARGET" install
   rm -rf *.md
