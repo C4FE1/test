@@ -1,0 +1,16 @@
+#!/bin/bash
+
+PKGNAME="config-sys"
+PKGBUILD="$HOME/src/ipm-c/tmp/$PKGNAME"
+PKGTARGET="$HOME/.local/usr/bin/"
+
+if [ "$1" == "i" ]; then
+  curl --get https://raw.githubusercontent.com/C4FE1/config-sys/main/config-sys > "$PKGBUILD/$PKGNAME"
+  mv "$PKGBUILD/$PKGNAME" "$PKGTARGET/$PKGNAME"
+
+elif [ "$1" == "r" ]; then
+  rm -rf "$PKGTARGET/$PKGNAME"
+
+else
+  echo "Opção desconhecida: $1"
+fi
