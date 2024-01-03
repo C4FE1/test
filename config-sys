@@ -6,10 +6,10 @@ PKGTARGET="$HOME/.local/usr/bin/"
 
 if [ "$1" == "i" ]; then
   mkdir "$PKGBUILD"
-  cd "PKGBUILD"
   curl --get https://raw.githubusercontent.com/C4FE1/config-sys/main/config-sys > "$PKGBUILD/$PKGNAME"
   mv "$PKGBUILD/$PKGNAME" "$PKGTARGET/$PKGNAME"
-
+  chmod +x "$PKGTARGET/$PKGNAME"
+  rm -rf "$PKGBUILD"
 elif [ "$1" == "r" ]; then
   rm -rf "$PKGTARGET/$PKGNAME"
 
