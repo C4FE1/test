@@ -1,0 +1,15 @@
+#!/bin/bash
+
+PKGNAME="a"
+PKGBUILD="$HOME/src/ipm-c/tmp/$PKGNAME"
+PKGTARGET="$PKGBUILD"
+
+if [ "$1" == "i" ]; then
+  echo "installando a"
+
+elif [ "$1" == "r" ]; then
+  echo "removendo a"
+
+else
+  echo "Opção desconhecida: $1"
+fi
